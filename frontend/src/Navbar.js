@@ -14,7 +14,7 @@ function Navbar(){
     return(
     <Row>
         <Col>
-          <h1>ONLINE GAS BOOKING</h1> 
+          <h1>Falkearth's Fuel</h1> 
         </Col>
       </Row>
     )
