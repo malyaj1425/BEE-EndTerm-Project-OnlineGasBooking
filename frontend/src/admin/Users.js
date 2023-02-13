@@ -4,7 +4,8 @@ function Users() {
   const [state, setState] = useState(localStorage.getItem("Result"));
   return (
     <>
-      <div>
+      <div className="reg2">
+        <h1>USERS</h1>
         <table className="table table-striped table-dark">
           <tbody key={'header'}>
             {JSON.parse(state).map((item,key)=>{

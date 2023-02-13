@@ -60,7 +60,8 @@ function Booking() {
   console.log(state.length);
   if(state != null && state.length > 2){return (
     <>
-      <div >
+      <div className="reg2">
+        <h1>BOOKING REQUESTS</h1>
         <table className="table table-striped table-dark">
           <tbody key={"header"}>
             {JSON.parse(state).map((item,key) => {
@@ -80,7 +81,7 @@ function Booking() {
             })}
           </tbody>
         </table>
-      </div>
+      
       <div className="mb-2">
       <Button type="submit" variant="danger" onClick={() => logout()}>
         Logout
@@ -90,12 +91,15 @@ function Booking() {
       <Button type="submit" variant="success" onClick={() => back()}>
         Back
       </Button>
+      </div>
       </div>
     </>
   );}
   else{
     return(
-      <><h1>NO BOOKINGS</h1>
+      <>
+      <div className="reg2">
+      <h1>NO BOOKINGS</h1>
       <div className="mb-2">
       <Button type="submit" variant="danger" onClick={() => logout()}>
         Logout
@@ -105,7 +109,7 @@ function Booking() {
       <Button type="submit" variant="success" onClick={() => back()}>
         Back
       </Button>
-      </div>
+      </div></div>
       </>
     );
   }

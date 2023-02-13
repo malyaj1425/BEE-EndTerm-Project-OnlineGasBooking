@@ -68,43 +68,56 @@ export default function AuthComponent() {
   };
 
   return (
-    <div>
-      <h1 className="text-center">Welcome, {localStorage.getItem("Name")}</h1>
-      <div className="mb-2">
-        <h1>BOOK GAS</h1>
+
+    <div className="reg2">
+      <h1 className="text-center" style={{padding:"10px",backgroundColor:"black",borderRadius:"10px",color:"white"}}>Welcome, {localStorage.getItem("Name")}</h1>
+      <div className="mb-2" style={{padding:"10px",backgroundColor:"black",borderRadius:"10px",color:"white"}}>
+        <h2>BOOK GAS</h2>
         <Form onSubmit={() => book()}>
           <Form.Group controlId="formBasicPassword">
-            <Form.Label><b>Payment Method</b></Form.Label>
-            <Form.Group>
-              <Form.Label>
-                ONLINE
-                <Form.Check
-                  type="radio"
-                  name="payment"
-                  value={"Online"}
-                  onChange={() => setPayment("Online")}
-                />
-              </Form.Label>
-            </Form.Group>
-            <Form.Group>
             <Form.Label>
-              CASH ON DELIVERY
-              <Form.Check
-                type="radio"
-                name="payment"
-                value={"Cash On Delivery"}
-                onChange={() => setPayment("Cash On Delivery")}
-              />
-              </Form.Label>
-              </Form.Group>
+              <b>Payment Method</b>
+            </Form.Label>
+            <br />
+            <Form.Group className="d-flex" style={{padding:"10px"}}>
+            ONLINE
+            <Form.Check
+              type="radio"
+              name="payment"
+              value={"Online"}
+              onChange={() => setPayment("Online")}
+              style={{marginRight:"20px"}}
+            />
+            CASH ON DELIVERY
+            <Form.Check
+              type="radio"
+              name="payment"
+              value={"Cash On Delivery"}
+              onChange={() => setPayment("Cash On Delivery")}
+            />
+            </Form.Group>
           </Form.Group>
           <Button type="submit" variant="success">
             Book
           </Button>
         </Form>
       </div>
-      <div className="mb-2">
-        <h1>APPLY FOR CONNECTION</h1>
+      <div className="mb-2" style={{padding:"10px",backgroundColor:"black",borderRadius:"10px",color:"white"}}>
+        <h3>APPLY FOR CONNECTION</h3>
+        <Button type="submit" onClick={() => apply()}>
+          Apply
+        </Button>
+      </div>
+      <div className="mb-2" style={{padding:"10px",backgroundColor:"black",borderRadius:"10px",color:"white"}}>
+        <h3>TRANSFER ADDRESS</h3>
+        <Form.Control
+            type="email"
+            name="email"
+            
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter New Address"
+            className="mb-2"
+          />
         <Button type="submit" onClick={() => apply()}>
           Apply
         </Button>

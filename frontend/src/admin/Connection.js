@@ -72,7 +72,8 @@ function Connection() {
   if(state != null && state.length > 2){
     return(
       <>
-        <div >
+        <div className="reg2">
+        <h1>CONNECTION REQUESTS</h1>
         <table className="table table-striped table-dark">
           <tbody key={"header"}>
             {JSON.parse(state).map((item,key) => {
@@ -106,7 +107,9 @@ function Connection() {
     )
   }
   else{return(
-    <><h1>NO CONNECTIONS</h1>
+    <>
+    <div className="reg2">
+    <h1>NO CONNECTIONS</h1>
       <div className="mb-2">
       <Button type="submit" variant="danger" onClick={() => logout()}>
         Logout
@@ -116,7 +119,7 @@ function Connection() {
       <Button type="submit" variant="success" onClick={() => back()}>
         Back
       </Button>
-      </div>
+      </div></div>
     </>
   )}
 }

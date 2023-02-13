@@ -72,11 +72,12 @@ export default function Admin() {
   });
   return (
     <>
-      <h1>Admin Portal</h1>
-      <div><Link to="/showusers" className="mb-2" >USERS</Link></div>
-      <div><Link to="/showbooking" className="mb-2" >BOOKINGS</Link></div>
-      <div><Link to="/showconnection" className="mb-2" >CONNECTIONS</Link></div>
-      <div>
+    <div className="reg2">
+      <h1 style={{fontSize:"100px",color:"black"}}>Admin Portal</h1>
+      <Button type="submit" style={{marginRight:"15px"}}><Link to="/showusers" className="mb-2" style={{color:"white",textDecoration:"none",}}>USERS</Link></Button>
+      <Button style={{marginRight:"15px"}}><Link to="/showbooking" className="mb-2" style={{color:"white",textDecoration:"none"}}>BOOKING REQUESTS</Link></Button>
+      <Button style={{marginRight:"15px"}}><Link to="/showconnection" className="mb-2" style={{color:"white",textDecoration:"none"}}>CONNECTION REQUESTS</Link></Button>
+      <Button style={{marginRight:"15px"}}><Link to="/showconnection" className="mb-2" style={{color:"white",textDecoration:"none"}}>TRANSFER REQUESTS</Link></Button>
       <Button type="submit" variant="danger" onClick={() => logout()}>
         Logout
       </Button>
